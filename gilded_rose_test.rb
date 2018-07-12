@@ -175,7 +175,7 @@ class GildedRoseTest < Minitest::Test
     item = GildedRose.new('Backstage passes to a TAKFAL80ETC concert', 20, 1)
     item.tick
 
-    assert_equal 22, item.quality
+    assert_equal 23, item.quality
     assert_equal 0, item.days_remaining
   end
 

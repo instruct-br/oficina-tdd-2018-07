@@ -20,6 +20,11 @@ class GildedRose
             if @quality < 50
               @quality += 1
             end
+            if @days_remaining < 6
+              if @quality < 50
+                @quality += 1
+              end
+            end
           end
         end
       end
