@@ -121,5 +121,14 @@ Agora apague o restante do método `tick`, deixando somente o "case/when". Como 
 
 ## Referências/ver mais
 
+Repositório com enunciado original em inglês e testes escritos em rspec:
+
 - https://github.com/jimweirich/gilded_rose_kata
+
+Palestra refatorando o kata passo a passo:
+
 - https://www.youtube.com/watch?v=8bZh5LMaSmE
+
+Repositório com implementação + testes (em minitest) com os passos de refatoração da palestra acima separado em pastas:
+
+- https://github.com/simonneutert/gilded_rose_kata
