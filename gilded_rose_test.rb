@@ -212,7 +212,7 @@ class GildedRoseTest < Minitest::Test
   end
 
   def test_conjured_on_sell_date
-    item = GildedRose.new('normal', 10, 0)
+    item = GildedRose.new('Conjured Mana Cake', 10, 0)
     item.tick
 
     assert_equal 6, item.quality
@@ -220,7 +220,7 @@ class GildedRoseTest < Minitest::Test
   end
 
   def test_conjured_after_sell_date
-    item = GildedRose.new('normal', 10, -1)
+    item = GildedRose.new('Conjured Mana Cake', 10, -1)
     item.tick
 
     assert_equal 6, item.quality
