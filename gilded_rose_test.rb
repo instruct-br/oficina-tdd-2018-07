@@ -207,28 +207,47 @@ class GildedRoseTest < Minitest::Test
     item = GildedRose.new('Conjured Mana Cake', 10, 5)
     item.tick
 
-    skip "todo"
-    # assert_equal 8, item.quality
-    # assert_equal 4, item.days_remaining
+    assert_equal 8, item.quality
+    assert_equal 4, item.days_remaining
   end
 
   def test_conjured_on_sell_date
-    skip "todo"
+    item = GildedRose.new('normal', 10, 0)
+    item.tick
+
+    assert_equal 6, item.quality
+    assert_equal -1, item.days_remaining
   end
 
   def test_conjured_after_sell_date
-    skip "todo"
+    item = GildedRose.new('normal', 10, -1)
+    item.tick
+
+    assert_equal 6, item.quality
+    assert_equal -2, item.days_remaining
   end
 
   def test_conjured_of_zero_quality
-    skip "todo"
+    item = GildedRose.new('Conjured Mana Cake', 0, 5)
+    item.tick
+
+    assert_equal 0, item.quality
+    assert_equal 4, item.days_remaining
   end
 
   def test_conjured_of_zero_quality_before_sell_date
-    skip "todo"
+    item = GildedRose.new('Conjured Mana Cake', 0, 5)
+    item.tick
+
+    assert_equal 0, item.quality
+    assert_equal 4, item.days_remaining
   end
 
   def test_conjured_of_zero_quality_after_sell_date
-    skip "todo"
+    item = GildedRose.new('Conjured Mana Cake', 0, -1)
+    item.tick
+
+    assert_equal 0, item.quality
+    assert_equal -2, item.days_remaining
   end
 end
